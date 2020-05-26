@@ -1,0 +1,46 @@
+.login {
+
+    .login-content{
+        background-color: white;
+        margin-top: 40px;
+        border-radius: 15px;
+        margin-bottom: 420px;
+
+        h1{
+            font-weight: 900;
+            color: #1f2746;
+            padding: 0px 0px 15px 0px;
+            margin: 15px 0px 15px 0px;
+            border-bottom: 1px solid #dbdbdd;
+            text-transform: uppercase;
+
+
+        }
+        .lg-content{
+            margin-bottom: 30px;
+            #input-email{
+                width: 96px;
+            }
+            a {
+                font-weight: 500;
+                color: #1f2746;
+                padding: 0px 0px 15px 0px;
+                margin: 15px 0px 15px 0px;
+                text-transform: uppercase;
+            }
+            a:hover{
+                color: #21b7cb !important;
+            }
+        }
+    }
+}
+
+
+@media (max-width:576px) {
+  .login {
+      .login-content{
+          margin-bottom: 30px;
+      }
+
+  }
+}

@@ -1,0 +1,51 @@
+section {
+    padding: 60px 0;
+}
+
+.blog-content {
+    padding: 15px 15px 15px 15px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+h2{
+    font-weight: 900;
+    margin: 0px 0px 15px 0px;
+    font-size: 24px;
+    line-height: 1.4;   
+}
+
+p{
+    margin: 0 0 5px 15px;
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    color: #1f2746;
+    text-decoration: none;
+    background: transparent;
+    font-weight: 500;
+}
+a:hover{
+    color: green;
+}
+
+.calendar-icon{
+    margin-left: 14px;
+}
+
+.short-desc{
+    padding: 10px 10px 10px 0px;
+    margin-bottom: 10px;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+.article-list{
+    padding: 25px;
+}
+
+.fixed-navigate{
+    padding-bottom: 10px;
+}

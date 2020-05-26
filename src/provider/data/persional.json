@@ -1,0 +1,191 @@
+{
+  "Persional": [
+    {
+      "fullname": "Trinh Quoc Thinh",
+      "career": "web developer & web designer",
+      "dateofbirth": "1992-08-13T17:00:00.000Z",
+      "phone": "0973001429",
+      "address": "1052/2 Lac Long Quan Q.TBinh",
+      "email": "koolmaster1408@gmail.com",
+      "website": "www.koolmaster.com",
+      "nationality": "Vietnam",
+      "aboutme": "- With 2.5 years of experience in Frond-end Developer and 1 year in Web and App Mobile for government and health. \n- Experience with UI, UX and know how to upgrade the interface for ease of use, beautiful and modern. \n- Excellent knowledge of Html, Css, Jquery, Angular. \n- Know how to make e-commerce web with liquid. \n- High sense of responsibility and quality assurance. \n- Good teamwork, hard-working, independent and ready for new challenges.\n- Always learning and using the latest technologies.",
+      "id": 1
+    }
+  ],
+  "social": [
+    {
+      "icon": "facebook",
+      "name": "facebook",
+      "link": "https: //www.facebook.com/trinh.q.thinh",
+      "status": true,
+      "id": 1
+    },
+    {
+      "icon": "google-plus",
+      "name": "google +",
+      "link": "https://plus.google.com/105835375917188733153?hl=vi",
+      "status": true,
+      "id": 2
+    },
+    {
+      "icon": "instagram",
+      "name": "instagram",
+      "link": "https://www.instagram.com/koolmaster1408/",
+      "status": true,
+      "id": 3
+    },
+    {
+      "icon": "linkedin",
+      "name": "linkedin",
+      "link": "#",
+      "status": true,
+      "id": 4
+    },
+    {
+      "icon": "skype",
+      "name": "skype",
+      "link": "skype:live:koolmaster140892?chat",
+      "status": true,
+      "id": 5
+    },
+    {
+      "icon": "flickr",
+      "name": "flickr",
+      "link": "https://www.flickr.com/photos/130626079@N05/",
+      "status": false,
+      "id": 6
+    },
+    {
+      "icon": "deviantart",
+      "name": "deviantart",
+      "link": "#",
+      "status": false,
+      "id": 7
+    },
+    {
+      "icon": "youtube-play",
+      "name": "youtube",
+      "link": "#",
+      "status": false,
+      "id": 8
+    },
+    {
+      "icon": "reddit-alien",
+      "name": "reddit",
+      "link": "#",
+      "status": false,
+      "id": 9
+    },
+    {
+      "icon": "telegram",
+      "name": "telegram",
+      "link": "#",
+      "status": false,
+      "id": 10
+    },
+    {
+      "icon": "pinterest",
+      "name": "pinterest",
+      "link": "#",
+      "status": false,
+      "id": 11
+    },
+    {
+      "icon": "snapchat-ghost",
+      "name": "snapchat",
+      "link": "#",
+      "status": false,
+      "id": 12
+    },
+    {
+      "icon": "twitter",
+      "name": "twitter",
+      "link": "#",
+      "status": false,
+      "id": 13
+    },
+    {
+      "icon": "whatsapp",
+      "name": "whatsapp",
+      "link": "#",
+      "status": false,
+      "id": 14
+    },
+    {
+      "icon": "volume-control-phone",
+      "name": "viber",
+      "link": "#",
+      "status": false,
+      "id": 15
+    }
+  ],
+  "interest": {
+    "des": "I have so many hobbies like playing games, soccer, gym, listening to music and photography. Underground music and role-playing games make me relaxed after working. Besides, I go to the gym everyday to have better health. I also spend the whole weekend for photography because I really love to capture meaningful moments of people around me.",
+    "list": [
+      {
+        "icon": "../../../assets/img/interest/travel.png",
+        "name": "Travel",
+        "id": 1
+      },
+      {
+        "icon": "../../../assets/img/interest/music.png",
+        "name": "Music",
+        "id": 2
+      },
+      {
+        "icon": "../../../assets/img/interest/gaming.png",
+        "name": "Gaming",
+        "id": 3
+      },
+      {
+        "icon": "../../../assets/img/interest/movies.png",
+        "name": "Movies",
+        "id": 4
+      },
+      {
+        "icon": "../../../assets/img/interest/photography.png",
+        "name": "Photography",
+        "id": 5
+      },
+      {
+        "icon": "../../../assets/img/interest/gym.png",
+        "name": "Gym",
+        "id": 6
+      },
+      {
+        "icon": "../../../assets/img/interest/football.png",
+        "name": "Football",
+        "id": 7
+      }
+    ]
+  },
+  "Education": [
+    {
+      "year": "2007 -  2010",
+      "level": "Student",
+      "schoolname": "High School Marie Curie",
+      "decription": "I participate in outside activities such as playing football, physics, chemistry. Also I am a biology student",
+      "id": 1
+    },
+    {
+      "year": "2012 - 2017",
+      "level": "University",
+      "schoolname": "University of Natural Sciences",
+      "decription": "Graduated in information technology. gda 7.1",
+      "id": 2
+    },
+    {
+      "year": "2014 - 2015",
+      "level": "Advanced Html/Css/Jquery",
+      "schoolname": "Informatics Center for University",
+      "decription": "I completed his degree from this prestigious institution. I successfully completed all the credits without any fallout and got A grade overall.",
+      "id": 3
+    }
+  ],
+  "Message": [
+    {
+      
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+<app-navbar [totalcart2]="total"></app-navbar>
+<div class="container">
+    <section class="tour-detail">
+      <div class="tour-title">
+        <h1> {{pro?.title}}</h1>
+      </div>
+      <div class="tour-sku">
+          <span>Mã SKU: {{pro?.SKU}}</span>
+      </div>
+      <div class="tour-kh">
+          <div class="tour-brand ds-inline">
+              Nơi khởi hành: {{pro?.Tennoikhoihanh}} |&nbsp;
+          </div>
+           <div class="pro-type ds-inline">
+             <span class="title">Nơi đến:</span> {{pro?.Tennoiden}} |&nbsp;
+           </div>
+           <div class="pro-schedule ds-inline">
+               {{pro?.thoigian}} |&nbsp;
+           </div>
+           <div class="pro-starttime ds-inline">
+                Khởi hành: {{pro?.thoigiankhoikhanh}} |&nbsp;
+           </div>
+           <div class="pro-transports ds-inline">
+               Phương tiện: <i *ngFor="let t of pro?.phuongtien"
+                 [class]="t==1?'fas fa-car':t==2?'fas fa-plane':t==3?'fas fa-bus':'fas fa-taxi'"></i>&nbsp;
+               <i class="fas fa-car"></i>&nbsp;
+           </div>
+      </div>
+      <div class="line">
+      </div>
+      <div class="pro-price">
+        <span class="current-price">{{pro?.giatien |currency :'VND':true}}</span>
+      </div>
+      <div class="line">
+      </div>
+      <div class="tour-pl">
+            <div class="tour-l">
+                Loại tour <span class="badge badge-pill badge-info">Tiết kiệm</span>
+            </div>
+            <div class="tour-l">
+              Các bữa ăn trong ngày <span class="badge badge-pill badge-info">Ăn uống tự túc</span>
+            </div>
+            <div class="tour-l">
+              Bảo hiểm tai nạn <span class="badge badge-pill badge-info">Không bao gồm bảo hiểm</span>
+            </div>
+
+             <div class="tour-l">
+               Hotline hỗ trợ khách hàng 24/7: (+84) 934 323 882
+               <span
+                 class="badge badge-pill badge-primary">Like</span>
+                 <span
+                 class="badge badge-pill badge-primary">Share</span>
+             </div>
+             <div class="line">
+             </div>
+             <div class="tour-sl row">
+                <div class="col-lg-2 col-12">
+                    Số lượng
+                </div>
+                 <div class="col-lg-3 col-12">
+                          <div class="input-group">
+                            <button (click)="minus()" class=" btn btn-outline-primary">-</button>
+                            <input [(ngModel)]="Quantity" type="number" class="form-control "
+                              name="Quantity" [value]="Quantity" />
+                            <button (click)="plus()" type=" button" class="btn btn-outline-primary">+</button>
+                          </div>
+                 </div>
+                 <div class="col-lg-3 col-12">
+                     <button type="button" (click)="addToCarrt(pro?.id)"
+                       class="btn btn-warning">Thêm giỏ hàng</button>
+                 </div>
+             </div>
+      </div>
+    </section>
+    <section class="tour-img">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="single-tour-item">
+                      <div class="tour-img">
+                        <img [src]="pro?.image[0]">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="video-wrap">
+                      <iframe width="100%" height="270" src="https://www.youtube.com/embed/9DVr51b-sds" frameborder="0"
+                        allow="autoplay; encrypted-media" webkitallowfullscreen="" mozallowfullscreen=""
+                        allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="tour-dep">
+        <div class="row">
+            <div class="col-lg-8 col-12 tour-nav">
+                <nav>
+                  <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                      aria-controls="nav-home" aria-selected="true">CHƯƠNG TRÌNH TOUR</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                      aria-controls="nav-profile" aria-selected="false">CHI TIẾT TOUR</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                      aria-controls="nav-contact" aria-selected="false">CÁC LƯU Ý KHÁC</a>
+                    <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
+                      aria-controls="nav-about" aria-selected="false">HÌNH ẢNH TOUR</a>
+                  </div>
+                </nav>
+                <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" [innerHTML]="pro?.thongtin">
+
+                  </div>
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                    [innerHTML]="pro?.chitiet">
+
+                  </div>
+                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    Giá tour bao gồm:
+                    <br>
+                    - Xe tham quan (4,7, 15, 25, 35, 45 chỗ tùy theo số lượng khách) theo chương trình
+                                <br>
+                    - Khách sạn theo tiêu chuẩn 2 khách/phòng hoặc 3 khách/phòng
+                      <br>
+                    + Tương đương 2*: Camellia, Azura, Oriole…..
+                          <br>
+                    + Tương đương 3*: Happy Light, Summer, Brandi, HN Golden, …..
+                  <br>
+                    + Tương đương 4*: Isena, Alana, Galliot, Galina, Citadines…..
+                  <br>
+
+                  </div>
+                  <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                      <div *ngFor="let i of pro?.image">
+                        <img style="width: 100%;" [src]="i">
+                      </div>
+                  </div>
+                </div>
+
+            </div>
+             <div class="col-lg-4 col-12 tour-tt">
+                  <div class="row tintuc-content">
+                     <h1>TIN TỨC LIÊN QUAN</h1>
+                  </div>
+                  <div class="row  tintuc-content" *ngFor="let blog of blogs">
+                    <div class="tt-img col-lg-4 col-sm-4 ">
+                      <a href="">
+                        <img [src]="blog?.image"
+                          alt="Khách sạn Robot – Điểm nhấn du lịch hấp dẫn của Xứ Phù Tang">
+                      </a>
+                    </div>
+                    <div class="tt-title col-lg-8 col-sm-8 ">
+                      <a href="">{{blog?.tieude |format}}</a>
+                      <div class="tt-info">
+                        <div class=" ds-in tt-date">
+                          <i class="fas fa-calendar-alt"></i> {{blog.ngaytao}}&nbsp;&nbsp;
+                        </div>
+                        <div class=" ds-in tt-author">
+                          <i class="fas fa-user"></i>{{blog.tacgia}}&nbsp;&nbsp;
+                        </div>
+                        <div class=" ds-in tt-cmt">
+                          <i class="fas fa-comments"></i>0&nbsp;&nbsp;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+
+        </div>
+
+    </section>
+    <section>
+      <div >
+         <div class=" cmt-face col-lg-8">
+           <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments" data-width="730"
+             data-numposts="1"></div>
+         </div>
+
+      </div>
+    </section>
+
+    <section class="tour-noi-bat">
+       <div class="row">
+         <div class="col-lg-12 text-center">
+           <div class="tour-title ">
+             <i class="fas fa-map-marker-alt fa-2x"></i> &nbsp;&nbsp;
+             <h1>CÁC TOUR NỔI BẬT</h1>
+           </div>
+         </div>
+       </div>
+      <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+        [animation]="'slide'">
+        <mdb-carousel-item >
+
+          <div class="col-lg-4 col-12" *ngFor="let item of produtcs; let i = index">
+               <div class="single-tour-item">
+                 <div class="tour-img">
+                   <a><img [src]="item.image[0]"></a>
+                   <div class="tag-location">
+                     <i class="fas fa-map-marker-alt"></i> {{item.Tennoiden}}
+                   </div>
+                 </div>
+                 <div class="tour-info">
+                   <div class="tour-title">
+                     <a href="">{{item.title |format}}</a>
+                   </div>
+                   <div class="tour-schedule-transports">
+                     <div class="tour-schedule">
+                       <i class="fas fa-calendar-alt"></i> &nbsp;{{item.thoigian}}
+                     </div>
+                     <span>&nbsp;| &nbsp;</span>
+                     <div class="tour-transports">
+                       <i *ngFor="let t of item.phuongtien"
+                         [class]="t==1?'fas fa-car':t==2?'fas fa-plane':t==3?'fas fa-bus':'fas fa-taxi'"></i>&nbsp;
+                       <i
+                         class="fas fa-car"></i>&nbsp;
+
+                     </div>
+
+                   </div>
+                   <div class="tour-starttime">
+                     Khởi hành: {{item.thoigiankhoikhanh}} tại {{item.Tennoikhoihanh}}
+                   </div>
+                   <div class="tour-price">
+                     Giá 1 khách chỉ từ:
+                     <div>
+                       <span class="current-price">{{item.giatien |currency :'VND':true}}</span>
+                     </div>
+                   </div>
+                   <div class="add-cart">
+                     <a>
+                       <button type="button" class="btn btn-success">Thêm giỏ hàng</button>
+                     </a>
+                   </div>
+                 </div>
+               </div>
+          </div>
+
+
+
+        </mdb-carousel-item>
+      </mdb-carousel>
+    </section>
+
+
+</div>

@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<section class="login">
+    <div class="container login-content">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-6 col-12">
+                <div class="title text-center">
+                    <h1>Đăng Nhập</h1>
+                </div>
+                <div class="lg-content">
+                    <form #lgForm="ngForm" (ngSubmit)="onSubmit(lgForm)">
+                        <div class="input-group " style="margin-bottom: 28px;">
+                            <div class="input-group-prepend ">
+                            <span class="input-group-text" id="input-email">Email</span>
+                            </div>
+
+                            <input type="text" required="required" name="txtemail" [(ngModel)]="txtemail" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" #email="ngModel" pattern="[^ @]*@[^ @]*">
+                             <mdb-error *ngIf="email.errors?.required && (email.dirty || email.touched)">Vui lòng nhập
+                               email</mdb-error>
+                             <mdb-error *ngIf="email.errors?.pattern && (email.dirty || email.touched)">Email không hợp lệ</mdb-error>
+
+                        </div>
+                        <div class="input-group mt-3  mb-3">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                            </div>
+                            <input type="password" name="txtpassword" required="required" [(ngModel)]="txtpassword"
+                            class="form-control"
+                            aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" #password="ngModel">
+                            <mdb-error *ngIf="password.errors?.required && (password.dirty || password.touched)">Vui
+                              lòng
+                              nhập
+                              Password</mdb-error>
+                        </div>
+
+
+                        <span *ngIf="!flag" class="label label-danger" style="color: red;">Vui lòng kiểm thông tin tài khoản !</span>
+
+                        <div class="text-center mb-3">
+                            <button mdbBtn color="primary" size="md" type="submit" id="button-addon1"
+                            mdbWavesEffect>ĐĂNG NHẬP</button>
+                        </div>
+
+
+                    </form>
+                    <div class="text-center mb-3">
+                        <a routerLink="/register">Đăng Kí</a>
+                    </div>
+                    <div class="text-center mb-3">
+                      <a>Quên mật khẩu ?</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

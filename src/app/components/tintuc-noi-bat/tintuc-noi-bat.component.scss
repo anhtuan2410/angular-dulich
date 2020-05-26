@@ -1,0 +1,54 @@
+.tintuc-nb {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .tintuc-title {
+    h1 {
+      display: inline-block;
+      font-weight: 700;
+      color: #1f2746;
+      margin: 0px;
+    }
+  }
+
+  .xem-tat-ca {
+    margin-top: 30px;
+  }
+  .tintuc-list{
+      .home-video{
+          border-radius: 10px;
+          overflow: hidden;
+          margin-bottom: 10px;
+          margin-top: 30px;
+          .video-wrap{
+              position: relative;
+              overflow: hidden;
+              max-width: 100%;
+          }
+      }
+      .tintuc-content{
+        margin-top: 30px;
+        .ds-in{
+            display: inline-block;
+        }
+        .tt-img {
+           img{
+            border-radius: 10px;
+            overflow: hidden;
+          }
+        }
+        .tt-title{
+            a{
+                text-decoration: none;
+                color: #1f2746;
+                font-weight: bold;
+            }
+            a:hover{
+                color: #21b7cb;
+            }
+        }
+
+      }
+  }
+
+}

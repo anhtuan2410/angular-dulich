@@ -1,0 +1,26 @@
+
+.search-box {
+    margin-top: 30px;
+    background: #1f2746;
+    border-radius: 10px;
+    color: white;
+    .content-box{
+        margin: 15px;
+        .title-content {
+          h2 {
+            font-weight: 900;
+            margin: 0px 0px 15px 0px;
+            color: #ffffff;
+          }
+
+        }
+        .search-content{
+            .search-button{
+                margin-top: 33px;
+                width: 100%;
+            }
+        }
+
+    }
+
+}

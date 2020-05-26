@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="container fixed-navigate">
+    <div class="navigate ">
+        <div class="fixed-home row">
+            <div class="tt-title">
+                <a href="">Trang Chủ </a>
+            </div>
+            <span>&nbsp;/&nbsp;</span>
+            <a routerLink="/blog">Tin Tức </a>
+            <span>&nbsp;/&nbsp;</span>
+            <span>{{blog?.tieude}}</span>
+        </div>
+    </div>
+    </div>
+    <div class="container blog-content">
+        <div *ngIf="blog">
+            <div>
+                <h2>{{blog.tieude}}</h2>
+            </div>
+            <div>
+                <div class="row">
+                    <div>
+                        <i class="fas fa-calendar-alt calendar-icon"></i>
+                        {{blog.ngaytao}}
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fas fa-comment-dots"></i>
+                        <span> 0</span>
+                    </div>
+                    <div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fas fa-user"></i>
+                        {{blog.tacgia}}
+                    </div>
+                </div>
+            </div>
+            <div class="short-desc">
+                <p>{{blog.motangan}}</p>
+            </div>
+            <div [innerHtml]="blog.motadai">
+
+            </div>
+        </div>
+    </div>
+    <div class="container article-list">
+        <div>
+        <h2>CÁC BÀI VIẾT LIÊN QUAN</h2>
+        </div>
+        <div *ngFor= "let title of titleBlog">
+            <a routerLink="/blog/{{title.id}}" >{{title.tieude | titlecase }}</a>
+        </div>
+    </div>
+</section>

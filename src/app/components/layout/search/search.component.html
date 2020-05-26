@@ -1,0 +1,29 @@
+<app-navbar ></app-navbar>
+
+<section class="search">
+    <app-search-box></app-search-box>
+    <div class="container search-content">
+        <div class="search-resullt">
+            <h1>Kết quả tìm kiếm </h1>
+            <div *ngIf="flag" class="result">
+                    <div  class="row search-product" *ngFor="let t of tour">
+                      <div class=" col-lg-4 col-12 search-img">
+                        <a routerLink="../tour/{{t.id}}"> <img [src]="t.image[0]"></a>
+                      </div>
+                      <div class=" col-lg-6 col-12 search-title">
+                        <a routerLink="../tour/{{t.id}}">{{t.title}}</a>
+                      </div>
+                      <div class=" col-lg-2 col-6 search-price">
+                       {{t.giatien |currency :'VND'}}
+                      </div>
+                    </div>
+            </div>
+            <div *ngIf="!flag" class="result-none">
+              <div  >
+                <p>KHÔNG TÌM THẤY KẾT QUẢ TÌM KIẾM PHÙ HỢP</p>
+              </div>
+            </div>
+        </div>
+
+    </div>
+</section>

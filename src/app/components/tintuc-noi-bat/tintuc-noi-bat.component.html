@@ -1,0 +1,55 @@
+<section class="tintuc-nb">
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-12 text-center">
+               <div class="tintuc-title ">
+                <i class="fas fa-map-marker-alt fa-2x" ></i> &nbsp;&nbsp;
+                 <h1>TIN TỨC NỔI BẬT</h1>
+               </div>
+             </div>
+        </div>
+        <div class="row tintuc-list">
+            <div class="col-lg-6 col-sm-12">
+                <div class="home-video">
+                    <div class="video-wrap">
+                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/9DVr51b-sds"
+                          frameborder="0" allow="autoplay; encrypted-media" webkitallowfullscreen=""
+                          mozallowfullscreen="" allowfullscreen=""></iframe>
+                    </div> 
+
+                    
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="row  tintuc-content" *ngFor="let tt of blogs">
+                       <div class="tt-img col-lg-4 col-sm-4 ">
+                            <a href="">
+                            <img src="//file.hstatic.net/1000214004/article/tin_tuc62_compact.jpg"
+                                alt="Khách sạn Robot – Điểm nhấn du lịch hấp dẫn của Xứ Phù Tang">
+                            </a>
+                       </div>
+                        <div class="tt-title col-lg-8 col-sm-8 ">
+                            <a routerLink="/blog/{{tt.id}}">{{tt.tieude}}</a>
+                             <div class="tt-info">
+                               <div class=" ds-in tt-date">
+                                 <i class="fas fa-calendar-alt"></i> {{tt.ngaytao}}&nbsp;&nbsp;&nbsp;
+                               </div>
+                               <div class=" ds-in tt-author">
+                                 <i class="fas fa-user"></i>{{tt.tacgia}}&nbsp;&nbsp;&nbsp;
+                               </div>
+                               <div class=" ds-in tt-cmt">
+                                 <i class="fas fa-comments"></i>0&nbsp;&nbsp;&nbsp;
+                               </div>
+                             </div>
+                        </div>
+                </div>
+
+
+            </div>
+        </div>
+         <div class=" xem-tat-ca text-center">
+           <button type="button" class="btn btn-success">Xem tất cả</button>
+         </div>
+    </div>
+
+</section>

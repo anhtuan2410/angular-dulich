@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="container">
+        <div class="navigate">
+            <div class="fixed-home row">
+                <div class="tt-title">
+                    <a href="">Trang Chủ </a>
+                </div>
+                <span>&nbsp;/</span>
+                <span>&nbsp;Tin Tức</span>
+            </div>
+        </div>
+        <h2>TIN TỨC</h2>
+        <hr>
+        <div class="row" id="tour-list">
+            <div class="col-lg-4 col-sm-12" *ngFor="let list of blogList">
+                <div class="single-tour-item">
+                    <div class="tour-img">
+                        <a><img [src]="list.image"></a>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-title">
+                            <a routerLink="/blog/{{list.id}}"> {{list.tieude}}</a>
+                        </div>
+                        <div class="tour-schedule-transports">
+                            <div class="tour-schedule">
+                                {{list.motangan | formatText}}
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="fixed-row">
+                        <div class="row">
+                            <div class="">
+                                <i class="fas fa-calendar-alt"></i> &nbsp;{{list.ngaytao}}
+                                &nbsp;&nbsp;
+                            </div>
+                            <div class="">
+                                <i class="fas fa-user"></i>&nbsp;{{list.tacgia}}
+                                &nbsp;&nbsp;
+                            </div>
+                            <div>
+                                <i class="fas fa-comments"></i> 0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

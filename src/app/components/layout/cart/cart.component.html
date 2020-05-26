@@ -1,0 +1,77 @@
+<app-navbar [totalcart3]="total1"></app-navbar>
+<section class="cart">
+  <div class="container cart-content">
+      <div class="row">
+          <div class="col-lg-12 col-12 cart-title">
+              <h1>Giỏ hàng</h1>
+          </div>
+      </div>
+      <div *ngIf="flagCart">
+         <div class="row cart-th">
+           <div class="col-lg-6">
+             Thông tin sản phẩm
+           </div>
+           <div class="col-lg-2">
+             Đơn giá
+           </div>
+           <div class="col-lg-2">
+             Số lượng
+           </div>
+           <div class="col-lg-2">
+             Tổng giá
+           </div>
+         </div>
+         <div class="row cart-td" *ngFor="let item of items">
+           <div class="col-lg-6">
+             <div class="row cart-product">
+               <div class=" col-lg-4 col-6 cart-img">
+                 <a> <img [src]="item.product.image"></a>
+               </div>
+               <div class=" col-lg-8 col-6 cart-title">
+                 <a> {{item.product.title}}</a>
+                 <br>
+                 <a><span (click)="remove(item.product.id)" class="badge badge-warning">Xóa</span></a>
+               </div>
+             </div>
+           </div>
+           <div class="col-lg-2 cart-price" id="all-price">
+             <span>{{item.product.giatien |currency:'VND'}}</span>
+           </div>
+           <div class="col-lg-2 col-6 cart-qty">
+             <div>
+               <input type="number" (change)="onKey(item.product.id,$event)" min="1" max="10" name="" id="input"
+                 class="form-control d-in" [value]="item.quantity" step="" required="required" title="">
+             </div>
+
+           </div>
+           <div class="col-lg-2 col-6 cart-price ">
+             <span>{{(item.quantity*item.product.giatien) |currency :'VND' }}</span>
+           </div>
+
+         </div>
+         <div class="row">
+           <div class="col-lg-12 col-12 cart-total">
+             <h5 class="d-in">Tổng tiền :&nbsp;&nbsp; </h5>
+             <span class="d-in">{{total |currency :'VND' }}</span>
+           </div>
+         </div>
+         <div class="row btn-control">
+           <div class="col-lg-6 col-6 ">
+             <button type="button" (click)="removeAll()" class="btn btn-success">Xóa hết </button>
+           </div>
+           <div class="col-lg-6 col-6 cart-total">
+             <button type="button" (click)="checkout()" class="btn btn-success">Thanh toán </button>
+           </div>
+
+         </div>
+      </div>
+
+      <div *ngIf="!flagCart" class="cart-empty">
+        <h1> Giỏ hàng trống !</h1>
+      </div>
+
+
+
+
+  </div>
+</section>

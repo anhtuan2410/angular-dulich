@@ -1,0 +1,72 @@
+.nhan-xet {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .tour-title {
+    margin-top: 30px;
+
+    h1 {
+      display: inline-block;
+      font-weight: 700;
+      margin: 0px;
+      text-transform: uppercase;
+    }
+  }
+  .slider-cmt{
+        margin-top: 30px;
+        text-align: center;
+        .carousel-indicators{
+            margin-top: 30px;
+            position: relative !important;
+            li {
+             width: 10px;
+             height: 10px;
+             border-radius: 100%;
+             background-color: darkgrey !important;
+           }
+           .active {
+             background-color: black !important;
+           }
+
+        }
+        .thumnail{
+            text-align: center;
+        }
+        .htesti-title{
+            font-weight: 900;
+            color: #1f2746;
+        }
+        .htesti-role{
+            padding-bottom: 30px;
+        }
+
+      .carousel-inner{
+          .single-cmt{
+              background-color: white;
+              position: relative;
+              border-radius: 20px;
+              img{
+                  height: 100px;
+                  width: 100px;
+                  border-radius: 50%;
+                  border: 5px solid #fff;
+                  overflow: hidden;
+                  display: inline-block;
+                  left: calc(50% - 50px);
+              }
+            .thumnail-content{
+                    font-family: serif;
+                    font-weight: 400;
+                    font-size: 19px;
+                    line-height: 33px;
+                    font-style: italic;
+                    margin-bottom: 15px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+
+            }
+
+          }
+      }
+  }
+}

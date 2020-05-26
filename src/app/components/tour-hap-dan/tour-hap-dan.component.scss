@@ -1,0 +1,56 @@
+a {
+  text-decoration: none;
+}
+
+.tour-hap-dan {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #1f2746;
+
+  .tour-title {
+    margin-top: 30px;
+    h1 {
+      display: inline-block;
+      font-weight: 700;
+      color:white;
+      margin: 0px;
+    }
+  }
+
+  .xem-tat-ca {
+    margin-top: 30px;
+  }
+
+  .single-tour-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 30px;
+
+    .tour-img {
+      position: relative;
+
+      a img {
+        width: 100%;
+        height: 198px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+
+      a img:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .tag-location {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 5px 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+  }
+
+}

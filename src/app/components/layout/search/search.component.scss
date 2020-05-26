@@ -1,0 +1,42 @@
+.search{
+    .search-resullt {
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 250px;
+
+
+        .result-none{
+            margin-bottom: 420px;
+             p {
+               font-weight: 900;
+               color: #1f2746;
+               padding: 0px 0px 15px 0px;
+               margin: 0px 0px 15px 0px;
+               border-bottom: 1px solid #dbdbdd;
+             }
+        }
+        .search-product{
+            margin-bottom: 20px;
+            .search-img{
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+            .search-title{
+                font-weight: bold;
+                color: black;
+                a:hover{
+                    color: #21b7cb
+                }
+            }
+            .search-price{
+                font-weight: bold;
+                color: red;
+            }
+        }
+    }
+
+
+}

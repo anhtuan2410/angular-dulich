@@ -1,0 +1,35 @@
+.doi-tac{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #1f2746;
+    .dt-title{
+        margin-top: 30px;
+        h1 {
+          display: inline-block;
+          font-weight: 700;
+          color: white;
+          margin: 0px;
+        }
+    }
+    .dt-list {
+        .dt-single{
+            img{
+                margin-bottom: 30px;
+                width: 140px;
+                background: white;
+                border-radius: 8px;
+                margin-top: 30px;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+
+            }
+            img:hover{
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
+
+        }
+    }
+}

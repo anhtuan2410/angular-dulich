@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+<section class="register">
+    <div class="container register-content">
+        <div class="row justify-content-md-center">
+             <div class="col-lg-6 col-12">
+                <div class="title text-center">
+
+                  <h1>Đăng Ký</h1>
+                </div>
+                <div class="lg-content">
+                     <form #lgForm="ngForm" (ngSubmit)="onSubmit(lgForm)">
+                          <div class="input-group " style="margin-bottom: 28px;">
+                            <div class="input-group-prepend ">
+                              <span class="input-group-text" id="input-name">Họ tên</span>
+                            </div>
+                            <input type="text" required="required" name="txthoten" [(ngModel)]="txthoten"
+                              class="form-control" aria-label="Sizing example input"
+                              aria-describedby="inputGroup-sizing-default" #hoten="ngModel">
+                              <mdb-error *ngIf="hoten.errors?.required && (hoten.dirty || hoten.touched)">Vui lòng nhập
+                                họ tên</mdb-error>
+
+                          </div>
+                         <div class="input-group " style="margin-bottom: 28px;">
+                           <div class="input-group-prepend ">
+                             <span class="input-group-text" id="input-name">Username</span>
+                           </div>
+                           <input type="text" required="required" name="txtusername" [(ngModel)]="txtusername"
+                             class="form-control" aria-label="Sizing example input"
+                             aria-describedby="inputGroup-sizing-default" #username="ngModel">
+                           <mdb-error *ngIf="username.errors?.required && (username.dirty || username.touched)">Vui lòng
+                             nhập Username</mdb-error>
+                         </div>
+                       <div class="input-group " style="margin-bottom: 28px;">
+                         <div class="input-group-prepend ">
+                           <span class="input-group-text" id="input-email">Email</span>
+                         </div>
+
+                         <input type="text" (keyup)="onKey()" required="required" name="txtemail"
+                         [(ngModel)]="txtemail"
+                           class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" #email="ngModel" pattern="[^ @]*@[^ @]*">
+                        <mdb-error *ngIf="email.errors?.required && (email.dirty || email.touched)">Vui lòng nhập
+                          Email</mdb-error>
+                          <mdb-error *ngIf="email.errors?.pattern && (email.dirty || email.touched)">Email không hợp lệ
+                          </mdb-error>
+                           <mdb-error *ngIf="flagexist">Email đã tồn tại !
+                           </mdb-error>
+                       </div>
+                       <div class="input-group" style="margin-bottom: 28px;">
+                         <div class="input-group-prepend">
+                           <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                         </div>
+                         <input type="password" name="txtpassword" required="required" [(ngModel)]="txtpassword"
+                           class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" #password="ngModel">
+                           <mdb-error *ngIf="password.errors?.required && (password.dirty || password.touched)">Vui lòng
+                             nhập
+                             Password</mdb-error>
+                       </div>
+
+                        <div class="input-group" style="margin-bottom: 28px;">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Confirm Password</span>
+                          </div>
+                          <input type="password" (keyup)="onKeyPass()" name="txtcfpassword" required="required"
+                            [(ngModel)]="txtcfpassword"
+                            class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" #cfpassword="ngModel">
+                            <mdb-error *ngIf="messPass">Password không khớp !</mdb-error>
+                        </div>
+
+
+                        <div class="input-group " style="margin-bottom: 28px;">
+                          <div class="input-group-prepend ">
+                            <span class="input-group-text">SĐT</span>
+                          </div>
+
+                          <input type="number" required="required" name="txtsdt" [(ngModel)]="txtsdt" class="form-control"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                            #sdt="ngModel">
+                            <mdb-error *ngIf="sdt.errors?.required && (sdt.dirty || sdt.touched)">Vui lòng
+                             nhập
+                             SĐT</mdb-error>
+
+                        </div>
+
+                       <div class="text-center mb-3">
+                         <button mdbBtn color="primary" size="md" type="submit" id="button-addon1" mdbWavesEffect>ĐĂNG KÝ</button>
+                       </div>
+
+
+                     </form>
+                </div>
+             </div>
+        </div>
+    </div>
+</section>
